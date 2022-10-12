@@ -29,7 +29,7 @@ print('='* 50 + ' Запрос 3 ' + '='*50)
 array_graphic = [[0 for row in range(10)] for col in range(10)]
 result = [0 for i in range(10)]
 
-for i in range(10):
+for i in range(9):
     result[i] = i + 1
 print(result)
 
@@ -42,12 +42,10 @@ def arr_init(arr_in, ste):
 #
 def arr_fill(arr_fi, re, ste):
     for i in range(9):
-        for j in range(10):
-            if i != 8:
-                if abs(arr_fi[i][0] - re[j]) < ste:
-                    arr_fi[i][j+1] = 1
-                if i == 8:
-                    arr_fi[9][j] = j
+        for j in range(9):
+            if abs(arr_fi[i][0] - re[j]) < ste:
+                arr_fi[i][j] = 1
+            arr_fi[9][j] = j
     return arr_fi
 
 def graphic_color(color):
@@ -58,10 +56,9 @@ def graphic_color(color):
                 line += WHITE + str(color[i][j])
             if color[i][j] == 0:
                 line += '  '
-            if color[i][j] == 1 and i != 8 and j != 1:
-                line += RED + '  ' + WHITE
-            if color[i][j] == 1 and i == 8 and j == 1:
-                line += RED + '  ' + WHITE
+            if i != 8:
+                if color[i][j] == 1:
+                    line += RED + '  ' + WHITE
         line += END
         print(line)
     print(WHITE + '0 1 2 3 4 5 6 7 8 9' + END)
@@ -72,7 +69,7 @@ graphic_color(array_graphic)
 
 for i in range(10):
         print(array_graphic[i])
-
+######
 print('='* 50 + ' Запрос 4 ' + '='*50)
 
 book = open('booksnew.csv','r', encoding='windows-1251')
