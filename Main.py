@@ -1,17 +1,19 @@
 print('='* 50 + ' Запрос 1 ' + '='*50)
 
+GREEN = '\u001b[42m'
+YELLOW ='\u001b[43m'
+RED = '\u001b[41m'
+WHITE = '\u001b[47m'
+BLACK = '\u001b[40m'
+BRIGHtPINK = '\u001b[48;5;217m'
+BRIGHTGRAY = '\u001b[48;5;241m'
+END = '\u001b[0m'
+
 def flag_sz():
     for i in range(3):
         print(GREEN + '  ' * 6 + YELLOW + '  ' * 8 + END )
     for j in range(3):
         print(GREEN + '  ' * 6 + RED + '  ' * 8 + END)
-
-GREEN = '\u001b[42m'
-YELLOW ='\u001b[43m'
-RED = '\u001b[41m'
-END = '\u001b[0m'
-WHITE = '\u001b[47m'
-BLACK = '\u001b[40m'
 
 flag_sz()
 print('='* 50 + ' Запрос 2 ' + '='*50)
@@ -21,14 +23,15 @@ for i in range(8):
 for i in range(8):
     print(WHITE + " " * (2*i) + BLACK  + " " * (32 - 4*i) + WHITE + " " * (4*i) + BLACK + " " * (32 - 4*i) +  WHITE + " " * (2*i)  +  END )
 
+
 print('='* 50 + ' Запрос 3 ' + '='*50)
+
 array_graphic = [[0 for row in range(10)] for col in range(10)]
 result = [0 for i in range(10)]
 
 for i in range(10):
     result[i] = i + 1
 print(result)
-
 
 def arr_init(arr_in, ste):
     for i in range(9):
@@ -75,11 +78,6 @@ print('='* 50 + ' Запрос 4 ' + '='*50)
 book = open('booksnew.csv','r', encoding='windows-1251')
 header = book.readline()
 lineBook = list(book)
-
-END = '\u001b[0m'
-WHITE = '\u001b[47m'
-BRIGHtPINK = '\u001b[48;5;217m'
-BRIGHTGRAY = '\u001b[48;5;241m'
 
 count1 = 0
 count2 = 0
