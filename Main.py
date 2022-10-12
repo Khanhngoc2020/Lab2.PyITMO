@@ -88,8 +88,8 @@ for line in lineBook:
 percentLessOrEqual = round((count1 * 100)/len(lineBook),0)
 percentGreaterThan = round((count2 * 100)/len(lineBook),0)
 
-print("Процент книг с ценой меньше или равной 150руб: ",percentGreaterThan, "%")
-print("Процент книг с ценой выше 150руб: ", percentLessOrEqual, "%")
+print("Процент книг с ценой выше  150руб: ",percentGreaterThan, "%")
+print("Процент книг с ценой меньше или равной 150руб: ", percentLessOrEqual, "%")
 def arr_y(arr_in, ste):
     for i in range(7):
         for j in range(7):
