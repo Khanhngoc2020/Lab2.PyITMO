@@ -1,4 +1,5 @@
 import os
+import sys
 from time import sleep
 
 arr_xy = [[0 for col in range(23)] for row in range(9)]
@@ -59,9 +60,12 @@ def color (arr_in):
         line += END
         print(line)
 
-color(arr_xy)
-sleep(3)
-os.system('cls')
+for i in range(5):
+    if i < 5:
+        color(arr_xy)
+        sleep(0.5)
+        os.system('cls')
+        sleep(0.5)
 
 
 
