@@ -60,8 +60,8 @@ def color (arr_in):
         line += END
         print(line)
 
-for i in range(5):
-    if i < 5:
+for i in range(3):
+    if i < 3:
         color(arr_xy)
         sleep(0.5)
         os.system('cls')
