@@ -66,7 +66,3 @@ for i in range(3):
         sleep(0.5)
         os.system('cls')
         sleep(0.5)
-
-
-
-
